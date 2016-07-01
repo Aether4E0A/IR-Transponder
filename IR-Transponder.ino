@@ -23,7 +23,7 @@ void setup() {
   pinMode(3, OUTPUT);     // Set output pin for OCR2B
   TCCR2A = _BV(COM2A1) | _BV(COM2B1) | _BV(WGM21) | _BV(WGM20); // Set registers for fast PWM.
   TCCR2B = _BV(WGM22) | _BV(CS20); // Read the 328p datasheet for more details on fast PWM.
-  OCR2A = 35; // At 16MHz, these values produce roughly 455KHz signal. 16M / 35 = 457K.
+  OCR2A = 34; // At 16MHz, these values produce roughly 455KHz signal. 16M / 35 = 457K.
   OCR2B = 17; // This should be half of above value. This can be adjusted slightly for taste.
 }
 
